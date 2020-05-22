@@ -1,5 +1,7 @@
-FROM python3
+FROM python:3
 
-COPY scripts/ .
+COPY . .
 
-RUN ["python", "scripts/main.py"]
+RUN ["pip", "install", "-r", "./requirements.txt"]
+
+CMD ["python", "main.py"]
